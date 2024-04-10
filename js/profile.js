@@ -1,3 +1,4 @@
+// Get HTML Elements
 let textNama = document.querySelector("#display-nama")
 let textRole = document.querySelector("#display-role")
 let textAvailability = document.querySelector("#display-availability")
@@ -14,17 +15,13 @@ let inputLokasi = document.querySelector("#form-lokasi")
 let inputPengalaman = document.querySelector("#form-pengalaman")
 let inputEmail = document.querySelector("#form-email")
 
-const displayData = () => {
-    inputNama.value = textNama.textContent
-    inputRole.value = textRole.textContent
-    inputAvailability.value = textAvailability.textContent
-    inputUsia.value = textUsia.textContent
-    inputLokasi.value = textLokasi.textContent
-    inputPengalaman.value = textPengalaman.textContent
-    inputEmail.value = textEmail.textContent
-}
+let formContainer = document.querySelector("#form-container")
+let btnEdit = document.querySelector("#btn-edit")
 
-displayData()
+// Add Event Listener for Edit and Submit
+btnEdit.addEventListener('click', () => {
+    formContainer.style.display = 'block'
+})
 
 document.querySelector("#profile-form").addEventListener('submit', (event) => {
     event.preventDefault()
@@ -36,4 +33,19 @@ document.querySelector("#profile-form").addEventListener('submit', (event) => {
     textLokasi.textContent = inputLokasi.value
     textPengalaman.textContent = inputPengalaman.value
     textEmail.textContent = inputEmail.value
+
+    formContainer.style.display = 'none'
 })
+
+// Add display data function for onload
+const displayData = () => {
+    inputNama.value = textNama.textContent
+    inputRole.value = textRole.textContent
+    inputAvailability.value = textAvailability.textContent
+    inputUsia.value = textUsia.textContent
+    inputLokasi.value = textLokasi.textContent
+    inputPengalaman.value = textPengalaman.textContent
+    inputEmail.value = textEmail.textContent
+}
+
+displayData()
