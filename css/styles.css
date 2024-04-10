@@ -1,3 +1,7 @@
+body {
+    background: whitesmoke;
+}
+
 .profile-img {
     width: 200px;
     height: 200px;
@@ -26,17 +30,18 @@
 .navbar {
     margin: 0 8px;
     align-items: center;
-    justify-content: center;
+    background: white;
 }
 
 .profile-info {
     padding-left: 16px;
-    border-left: 3px solid lightgray;
+    border-left: 2px solid lightgray;
 }
 
 .home {
     justify-content: center;
     display: flex;
+    margin: 20px 0;
 }
 
 .home-container {
